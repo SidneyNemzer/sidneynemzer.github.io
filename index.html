@@ -1,0 +1,207 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
+    />
+    <title>Sidney Codes</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        height: 100%;
+        background: #232323;
+        font-family: sans-serif;
+      }
+
+      body {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0;
+        padding: 20px;
+      }
+
+      h1 {
+        color: #cbcbcb;
+        font-size: 128;
+        font-weight: normal;
+        text-align: center;
+        margin: 0 0 50px;
+      }
+
+      .items {
+        color: white;
+        display: grid;
+        grid-template-columns:
+          [column_1] min-content
+          30px
+          [column_2] min-content;
+        grid-template-rows: auto;
+        row-gap: 20px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .items__column_1 {
+        grid-column-start: column_1;
+      }
+
+      .items__column_2 {
+        grid-column-start: column_2;
+      }
+
+      .item__title {
+        color: #8b8b8b;
+        text-align: right;
+      }
+
+      .item__content {
+        display: flex;
+        align-items: center;
+      }
+
+      .item__description {
+        margin-left: 15px;
+      }
+
+      .item__icon {
+        font-size: 42px;
+      }
+
+      .item--disabled {
+        color: #8b8b8b;
+      }
+
+      .item__link {
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        transition: color 250ms linear;
+      }
+
+      .item__icon_container {
+        position: relative;
+        width: 42px;
+        height: 42px;
+      }
+
+      .item__icon--image {
+        position: absolute;
+        transition: opacity 250ms linear;
+      }
+
+      .item__icon--image_2 {
+        opacity: 0;
+      }
+
+      .item__link:hover {
+        color: #4c81e8;
+      }
+
+      .item__link:hover .item__icon--image_2,
+      .item__link:hover .item__icon {
+        color: #4c81e8;
+        opacity: 1;
+      }
+
+      .item_link:hover .item__icon--image_1 {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Sidney Codes</h1>
+    <div class="items">
+      <div class="item__title items__column_1">Who</div>
+      <a
+        href="https://www.linkedin.com/in/sidney-nemzer/"
+        class="item__content item__link items__column_2"
+      >
+        <div class="item__icon_container">
+          <img
+            class="item__icon--image item__icon--image_1"
+            height="42"
+            src="/linkedin_icon.png"
+            alt="Linkedin"
+          />
+          <img
+            class="item__icon--image item__icon--image_2"
+            height="42"
+            src="/linkedin_icon_blue.png"
+            alt="Linkedin"
+          />
+        </div>
+        <!-- Override margin because the linkedin icon is a little wider -->
+        <div class="item__description" style="margin-left: 10px">
+          SidneyNemzer
+        </div>
+      </a>
+
+      <div class="item__title items__column_1">What</div>
+      <a
+        href="https://github.com/SidneyNemzer"
+        class="item__content item__link items__column_2"
+      >
+        <svg
+          width="42"
+          height="42"
+          viewBox="0 0 42 42"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M20.9981 -9.61793e-07C9.40323 -9.61793e-07 0 9.63987 0 21.5321C0 31.0451 6.01658 39.1147 14.3614 41.9618C15.4121 42.1601 15.795 41.4953 15.795 40.9242C15.795 40.4127 15.7769 39.0592 15.7666 37.2628C9.92536 38.5635 8.69291 34.376 8.69291 34.376C7.73763 31.8884 6.36079 31.2262 6.36079 31.2262C4.45411 29.8912 6.50518 29.9176 6.50518 29.9176C8.61298 30.0696 9.72166 32.1369 9.72166 32.1369C11.5948 35.4269 14.6373 34.4765 15.8336 33.9253C16.0244 32.5348 16.5672 31.5857 17.1666 31.0477C12.5037 30.5045 7.60098 28.6566 7.60098 20.4059C7.60098 18.0558 8.41961 16.1326 9.76293 14.6283C9.54635 14.0838 8.82569 11.8935 9.96919 8.93007C9.96919 8.93007 11.7315 8.35113 15.7434 11.1375C17.418 10.659 19.2151 10.4211 21.0006 10.4118C22.7849 10.4211 24.5807 10.659 26.2579 11.1375C30.2672 8.35113 32.027 8.93007 32.027 8.93007C33.173 11.8935 32.4524 14.0838 32.2371 14.6283C33.583 16.1326 34.3952 18.0558 34.3952 20.4059C34.3952 28.6778 29.4847 30.4979 24.8076 31.0306C25.5605 31.6954 26.2321 33.0093 26.2321 35.0171C26.2321 37.896 26.2063 40.2184 26.2063 40.9242C26.2063 41.5005 26.5854 42.1707 27.6502 41.9605C35.9886 39.1068 42 31.0424 42 21.5321C42 9.63987 32.5968 -9.61793e-07 20.9981 -9.61793e-07"
+            fill="currentColor"
+          />
+        </svg>
+        <div class="item__description">SidneyNemzer</div>
+      </a>
+
+      <div class="item__title items__column_1">When</div>
+      <div class="item__content items__column_2">
+        <span class="item__icon items__column_2 material-symbols-outlined">
+          schedule
+        </span>
+        <div class="item__description items__column_3">Now</div>
+      </div>
+
+      <div class="item__title items__column_1">Where</div>
+      <div class="item__content items__column_2">
+        <span class="item__icon items__column_2 material-symbols-outlined"
+          >location_on</span
+        >
+        <div class="item__description items__column_3">Los Angeles</div>
+      </div>
+
+      <div class="item__title items__column_1">Why</div>
+      <div class="item__content items__column_2">
+        <span
+          class="item__icon items__column_2 item--disabled material-symbols-outlined"
+        >
+          import_contacts
+        </span>
+        <div class="item--disabled item__description items__column_3">
+          Blog (soon)
+        </div>
+      </div>
+
+      <div class="item__title items__column_1">How</div>
+      <div class="item__content items__column_2">
+        <span class="item__icon items__column_2 material-symbols-outlined">
+          keyboard
+        </span>
+        <div class="item__description items__column_3">Keyboard</div>
+      </div>
+    </div>
+  </body>
+</html>
