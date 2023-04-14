@@ -29,12 +29,24 @@
         padding: 20px;
       }
 
+      @media (max-height: 600px) {
+        body {
+          justify-content: flex-start;
+        }
+      }
+
       h1 {
         color: #cbcbcb;
-        font-size: 128;
+        font-size: 110px;
         font-weight: normal;
         text-align: center;
         margin: 0 0 50px;
+      }
+
+      @media (max-width: 850px) {
+        h1 {
+          font-size: 80px;
+        }
       }
 
       .items {
